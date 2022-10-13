@@ -1,28 +1,32 @@
 import React, {useState} from "react";
-import { TextInput } from "react-native-gesture-handler";
-import { View,Text,StyleSheet } from "react-native-web";
+import { View, Text , StyleSheet, TextInput } from "react-native-web";
 
 const TextScreen = () => {
-const [name,setName] =useState ('');
+const [name, setName] =useState ('');
 
- return
+ return (
     <View>
+        <Text>Enter name:</Text>
         <TextInput
-        style={styles.input}
-        autoCorrect={false}
-        autoCapitalize="none"
-        value={name}
-        onChangeText={newValue=>setName(newValue)}
-        ></TextInput>
+            style={styles.input}
+            autoCorrect={false}
+            autoCapitalize="none"
+            value={name}
+            onChangeText={newValue => setName(newValue)}
+        />
+        <Text>My name is {name}</Text>
+        {false ? <Text>That was true</Text> : null}
     </View>
+ );
 };
+
 
 const styles = StyleSheet.create({
     input : {
         margin:15,
         borderCoLor: 'black',
         borderWidth:1
-        value='hi there'
+       // value='hi there'
     }
 });
   
