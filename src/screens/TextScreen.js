@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { View, Text , StyleSheet, TextInput } from "react-native-web";
+import { View, Text , StyleSheet, TextInput } from 'react-native';
 
 const TextScreen = () => {
 const [name, setName] =useState ('');
